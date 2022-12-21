@@ -1,0 +1,34 @@
+.page{
+  border: 3px solid;
+  min-height: 97vh;
+
+  display: flex;
+}
+
+aside{
+  background-color: lightgreen;
+  flex: 1;
+}
+
+main{
+  background-color: lightblue;
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main section:nth-child(1){
+  background: lightgoldenrodyellow;
+  flex: 1;
+}
+
+main section:nth-child(2){
+  background: lightgray;
+  flex: 0 120px;
+}
+
+main section:nth-child(3){
+  background: lightsalmon;
+  flex: 2;
+}
