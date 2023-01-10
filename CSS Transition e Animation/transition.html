@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transition</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box-red,
+        .box-green,
+        .box-blue,
+        .box-yellow {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+        }
+
+        .box-red {
+            background-color: red;
+            transition: background-color 1s ease 2s;
+        }
+
+        .box-red:hover {
+            background-color: royalblue;
+            transition-property: background-color;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 2s;
+        }
+
+        .box-green {
+            background-color: green;
+            transition: all 1s linear 2s;
+        }
+            
+        .box-green:hover {
+            transition: all 1s cubic-bezier(.29, 1.01, 1, -0.68);
+            background-color: purple;
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+        }
+
+        .box-blue {
+            background-color: blue;
+            transition: width 1s linear 1s;
+        }
+
+        .box-blue:hover {
+            transition: width 2s ease-in-out 0s;
+            width: 350px;
+        }
+
+        .box-yellow {
+            background-color: yellow;
+            transition: opacity 2s linear 1s;
+        }
+
+        .box-yellow:hover {
+            opacity: 0;
+            transition: opacity 1s linear 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-red"></div>
+    <div class="box-green"></div>
+    <div class="box-blue"></div>
+    <div class="box-yellow"></div>
+</body>
+
+</html>
